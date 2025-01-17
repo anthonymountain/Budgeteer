@@ -16,7 +16,7 @@ Budgeteer is a financial management application that helps users track their exp
 ## Features
 * **Expense Tracker**:
   * Log and categorize daily expenses.
-  * View detailed expense history with filters by category and date.
+  * View detailed expense history with filters by category.
 * **Goals Management**:
   * Create and track progress toward financial goals.
   * Update progress dynamically as you save.
