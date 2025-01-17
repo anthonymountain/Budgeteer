@@ -21,12 +21,17 @@ def add_subscription(name, cost, billing_cycle, start_date):
 def view_subscriptions():
     subscriptions = read_file(file_path="subscriptions.json")
     for subscription in subscriptions:
-        print(f"ID: {subscription['id']}\nName: {subscription['name']}\nCost: ${subscription['cost']:.2f}\nBilling Cycle: {subscription['billing_cycle']}\nStart Date: {subscription['start_date']}\n")
+        print(f"ID: {subscription['id']}\nName: {subscription['name']}\nCost: "
+              f"${subscription['cost']:.2f}\nBilling Cycle: "
+              f"{subscription['billing_cycle']}\nStart Date: "
+              f"{subscription['start_date']}\n")
     return subscriptions
+
 
 def delete_subscription(subscription_id):
     subscriptions = read_file(file_path="subscriptions.json")
-    updated_subscriptions = [sub for sub in subscriptions if sub["id"] != subscription_id]
+    updated_subscriptions = [sub for sub in subscriptions if sub["id"] !=
+                             subscription_id]
     if len(subscriptions) == len(updated_subscriptions):
         print("Subscription not found.")
         return False
