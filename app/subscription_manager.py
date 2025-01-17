@@ -22,7 +22,7 @@ def view_subscriptions():
     subscriptions = read_file(file_path="subscriptions.json")
     for subscription in subscriptions:
         print(f"ID: {subscription['id']}\nName: {subscription['name']}\nCost: ${subscription['cost']:.2f}\nBilling Cycle: {subscription['billing_cycle']}\nStart Date: {subscription['start_date']}\n")
-
+    return subscriptions
 
 def delete_subscription(subscription_id):
     subscriptions = read_file(file_path="subscriptions.json")

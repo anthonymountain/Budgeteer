@@ -21,7 +21,7 @@ def view_expenses():
     expenses = read_file()
     for expense in expenses:
         print(f"ID: {expense['id']}\nDescription: {expense['description']}\nAmount: ${expense['amount']:.2f}\nCategory: {expense['category']}\nDate: {expense['date']}\n")
-
+    return expenses
 
 def delete_expense(expense_id):
     expenses = read_file()

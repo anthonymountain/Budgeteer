@@ -20,7 +20,7 @@ def view_goals():
     goals = read_file(file_path="goals.json")
     for goal in goals:
         print(f"ID: {goal['id']}\nDescription: {goal['description']}\nTarget Amount: ${goal['target_amount']:.2f}\nProgress: ${goal['progress']:.2f}\n")
-
+    return goals
 
 def update_goal_progress(goal_id, amount):
     goals = read_file(file_path="goals.json")
